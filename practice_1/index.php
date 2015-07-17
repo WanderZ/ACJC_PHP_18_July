@@ -1,7 +1,7 @@
 <?php
     # Practice 1
     
-    # Structure of a typical php file
+    # Structure of a typical php file 
     # Php setup
     # HTML doctype
     # Linking to external library
@@ -23,6 +23,20 @@
     # Q2: Change the "Click Here" to "Submit". 
     
     # Q3: Add a reset button to reset your whole form to its original state.
+    # Hint: type of button can be modified.
+    
+    # Extra Practice Questions
+    # ==================
+    # Q4: Display the submitted message with "print" instead of "var_dump".
+    
+    # Q5: Make whatever is entered in lowercase.
+    # Hint: use strtolower() 
+    
+    # Q6: Sometimes users types an extra space before or after an input remove this input.
+    # Hint: use trim()
+    
+    # Q7: Count and display the number of characters in the uers' input
+    # Hint: use strlen()
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,17 +49,21 @@
         <link rel="icon" type="image/png" href="../images/favicon.ico">
     </head>
     <body>
-        <pre><?php
-            # var_dump is the command to "vomit" out all the contents of a php variable. Useful for debugging!
-            var_dump($_GET);
-            
-            # Random note: $_GET is an array.
-        ?></pre>
-        <div class="container">
+        <div class="container" style="margin: 0 auto;">
+            <div class="row">
+                <pre>
+                <?php
+                    # var_dump is the command to "vomit" out all the contents of a php variable. Useful for debugging!
+                    var_dump($_GET);
+                    
+                    # Random note: $_GET is an array.
+                ?>
+                </pre>
+            </div>
             <div class="row">
                 <form method="get" action="">
                     <div class="form-group">
-                        <label for="msg">Message</label>
+                        <label for="msg">Enter Your Message</label>
                         <input class="form-control" type="text" id="msg" name="message">
                     </div>
                     <input class="btn btn-primary btn-block" type="submit" value="Click here">

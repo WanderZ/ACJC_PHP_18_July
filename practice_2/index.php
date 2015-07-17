@@ -5,7 +5,11 @@
     
     # Tasks and Questions
     # ===================
-    # Q1: Change method from "get" to "post". Are you still able to manipulate the url to modify content?
+    # Q1: Change method from "get" to "post". 
+    # Are you still able to manipulate the URL to modify the data submitted?
+    
+    # Q2: Lets create a menu so that you can navigate from the results back to the entering of message
+    # Hint: include_once() to include a whole chunk of navigation html shared for both index.php and result.php.
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +31,7 @@
                         <label for="msg">Message</label>
                         <input class="form-control" type="text" id="msg" name="msg">
                     </div>
-                    <input class="btn btn-primary btn-block" type="submit" value="Submit">
+                    <input class="btn btn-primary btn-block hvr-shutter-in-horizontal" type="submit" value="Submit">
                     <input class="btn btn-default btn-block" type="reset" value="Reset">
                 </form>
             </div>

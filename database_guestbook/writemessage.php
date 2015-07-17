@@ -4,32 +4,15 @@
     # Tasks
     # =====
     
-    # Q1: Check if user is logged in
+    # Check if user is logged in
     # If user is logged in, 
     # 1) Show the form to post a message
     # 2) Display a welcome message above the text box with the user's name
     
-    # Q2: If user is not logged in, either
-    # Redirect the user to login.php using the location header
-    # Hint: http://sg.php.net/manual/en/function.header.php
-    
-    # OR 
-    
-    # Display a link for the user to click to log in
-    # Hint: "anchor tag" or "<a href=''></a>"
-    
-    # Extra Practice Questions
-    # ========================
-    # Q3: Can you create a navigation bar that will toggle between 
-    #     "login" when user is logged out and "logout" when the user is logged in"
-    # Hint: You can check if your user is logged in via "isset($_SESSION['name'])"
-    
-    # Q4: Create a function that will check if the user is logged in
-    # Hint: "function isLoggedIn() {return false;}"
-    
-    # Q5: Can you disable the submit button when the user is not logged in,
-    #     so as to prevent your web application to not work without important user data?
-    # Hint: you can use if(isLoggedIn()){ ... }
+    # If user is not logged in, either
+    # 1) Redirect the user to login.php using the location header
+    #    See http://sg.php.net/manual/en/function.header.php
+    # 2) Display a link for the user to click to log in
 ?>
 <!DOCTYPE html>
 <html>

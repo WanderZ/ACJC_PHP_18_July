@@ -24,7 +24,7 @@
         <div class="container">
             <div class="alert alert-success" role="alert">
                 <?php
-                    echo $_SESSION['name']."says :". $_GET['msg'];
+                    echo $_SESSION['name']."says :". $_GET['message'];
                 ?>
             </div>
             <?php

@@ -1,19 +1,19 @@
 <?php
 
-    # Tasks and Questions
-    # ===================
+    session_start();
     
-    # Change the form in index.php to use the POST method. 
-    # Modify the code below accordingly to display the output
+    if (!isset($_SESSION['username'])) {
+        die('This page can only be viewed by logged in users!');
+    }
     
-    # Q1: If you have noticed, where you enter in "newlines" in your messages,
-    #     it does not display as a new line! Let attempt to fix that.
-    # Hint: nl2br()
+    if (isset($_POST['message'])) {
+        file_put_contents('messages.txt', $_POST['themessage']."\n", FILE_APPEND);
+    }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Here's the heading</title>
+        <title>Guestbook</title>
         <!-- Link to external css here -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -24,10 +24,15 @@
         <div class="container">
             <div class="alert alert-success" role="alert">
                 <?php
-                    echo $_GET['name']." says: ". $_GET['msg'];
+                    echo $_SESSION['name']."says :". $_GET['msg'];
                 ?>
             </div>
-            <a href="index.php">Post another message</a>
+            <?php
+                $messages = file('messages.txt');
+                foreach ($messages as $message) {
+                    echo '<p>'.htmlentities($message).'</p>';
+                }
+            ?>
         </div>
     </body>
     <!-- Link to external js here -->

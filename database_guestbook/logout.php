@@ -23,9 +23,4 @@
     
     # Redirect your user back to the login page.
     header('Location: login.php');
-    
-    # Extra Question
-    # ==============
-    # Q1: Modify login.php and logout.php so that when a user attempts to logout
-    #     A success message will be displayed (i.e. "Successfully logged out")
 ?>

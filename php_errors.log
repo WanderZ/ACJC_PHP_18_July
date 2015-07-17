@@ -8,3 +8,52 @@
 [17-Jul-2015 08:21:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/practice_4/result.php on line 26
 [17-Jul-2015 08:21:03 UTC] PHP Stack trace:
 [17-Jul-2015 08:21:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/practice_4/result.php:0
+[17-Jul-2015 16:57:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/workspace/database_3/dbconfig.php:2
+Stack trace:
+#0 /home/ubuntu/workspace/database_3/dbconfig.php(2): PDO->__construct('mysql:host=loca...', 'wanderz', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/database_3/dbconfig.php on line 2
+[17-Jul-2015 17:11:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'amy' for key 'PRIMARY'' in /home/ubuntu/workspace/database_3/db-demo.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/database_3/db-demo.php(14): PDO->exec('INSERT INTO use...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/database_3/db-demo.php on line 14
+[17-Jul-2015 17:23:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'amy' for key 'PRIMARY'' in /home/ubuntu/workspace/database_3/db-demo.php:17
+Stack trace:
+#0 /home/ubuntu/workspace/database_3/db-demo.php(17): PDO->exec('INSERT INTO use...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/database_3/db-demo.php on line 17
+[17-Jul-2015 17:24:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'amy' for key 'PRIMARY'' in /home/ubuntu/workspace/database_3/db-demo.php:17
+Stack trace:
+#0 /home/ubuntu/workspace/database_3/db-demo.php(17): PDO->exec('INSERT INTO use...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/database_3/db-demo.php on line 17
+[17-Jul-2015 17:24:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'amy' for key 'PRIMARY'' in /home/ubuntu/workspace/database_3/db-demo.php:17
+Stack trace:
+#0 /home/ubuntu/workspace/database_3/db-demo.php(17): PDO->exec('INSERT INTO use...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/database_3/db-demo.php on line 17
+[17-Jul-2015 18:23:20 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/database_guestbook/createuser.php on line 52
+[17-Jul-2015 18:24:05 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/database_guestbook/createuser.php on line 46
+[17-Jul-2015 18:24:05 UTC] PHP Stack trace:
+[17-Jul-2015 18:24:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/database_guestbook/createuser.php:0
+[17-Jul-2015 18:24:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'john' for key 'PRIMARY'' in /home/ubuntu/workspace/database_guestbook/createuser.php:54
+Stack trace:
+#0 /home/ubuntu/workspace/database_guestbook/createuser.php(54): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/database_guestbook/createuser.php on line 54
+[17-Jul-2015 18:24:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'mary' for key 'PRIMARY'' in /home/ubuntu/workspace/database_guestbook/createuser.php:54
+Stack trace:
+#0 /home/ubuntu/workspace/database_guestbook/createuser.php(54): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/database_guestbook/createuser.php on line 54
+[17-Jul-2015 18:32:02 UTC] PHP Warning:  file(messages.txt): failed to open stream: No such file or directory in /home/ubuntu/workspace/practice_4/result.php on line 31
+[17-Jul-2015 18:32:02 UTC] PHP Stack trace:
+[17-Jul-2015 18:32:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/practice_4/result.php:0
+[17-Jul-2015 18:32:02 UTC] PHP   2. file() /home/ubuntu/workspace/practice_4/result.php:31
+[17-Jul-2015 18:32:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/practice_4/result.php on line 32
+[17-Jul-2015 18:32:02 UTC] PHP Stack trace:
+[17-Jul-2015 18:32:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/practice_4/result.php:0
+[17-Jul-2015 18:36:23 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/database_guestbook/login.php on line 17
+[17-Jul-2015 18:36:23 UTC] PHP Stack trace:
+[17-Jul-2015 18:36:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/database_guestbook/login.php:0

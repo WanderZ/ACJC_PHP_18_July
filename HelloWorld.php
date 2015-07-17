@@ -17,19 +17,30 @@
     <body>
         <?php
             $variable = 'World';
-            echo 'Hello'.$variable.(1+1);
+            echo "Hello".$variable.(1+1);
             
             # Welcome to PHP! This is a warm-up for the morning
             # Here we learn about variables and the echo command
             
-            # Q1: There is no space between HelloWorld. Add the space between them
+            # Q1: There is no space between HelloWorld2. 
+            #       Add the space between them until it is "Hello World 2"
             
             # Q2: Change the "World" to your own name.    
             # Hint: Change $variable such that the script says 'Hello <your name> 2'
             
             # Q3: Change 1+1 such that the script calculates the multiplication of two numbers from two variables
-            # Hint: To multiply two numbers: $a * $b
+            # Hint: To multiply two numbers, use a multiply symbol '*'.
+            # Hint: variables are defined like $variable, a '$' and a string to identify this variable
+            # Note: variables cannot start with a number (i.e. 0-9) nor an underscore '_'
+            # Note: variables cannot contain certain special characters.
             
+            # Note: 
+            # $str1 = "this is a way to define a string";
+            # #str2 = 'this is also a way to define a string';
+            # besides using echo, print is also a php command to print out strings, and other variables.
+            
+            # php cheat sheet
+            # Check out http://overapi.com/php/ for much much more api and functions 
         ?>
     </body>
 </html>
