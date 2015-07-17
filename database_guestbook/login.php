@@ -2,8 +2,8 @@
     session_start();
     
     if(isset($_SESSION['name'])) {
-        # Redirect to index because user has already logged in.
-        header('Location: index.php');
+        # Redirect because user has already logged in.
+        header('Location: writemessage.php');
     }
     
     $loginFailureReason = ''; // Nothing to show

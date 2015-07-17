@@ -2,13 +2,11 @@
 
     session_start();
     
-    if (!isset($_SESSION['username'])) {
+    # We put this check here to not continue if the user is not logged in
+    if (!isset($_SESSION['name'])) {
         die('This page can only be viewed by logged in users!');
     }
     
-    if (isset($_POST['message'])) {
-        file_put_contents('messages.txt', $_POST['themessage']."\n", FILE_APPEND);
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,15 +20,16 @@
     </head>
     <body>
         <div class="container">
-            <div class="alert alert-success" role="alert">
-                <?php
-                    echo $_SESSION['name']."says :". $_GET['msg'];
-                ?>
-            </div>
             <?php
-                $messages = file('messages.txt');
-                foreach ($messages as $message) {
-                    echo '<p>'.htmlentities($message).'</p>';
+                require_once('dbconfig.php');
+            
+                $sql = 'SELECT * FROM messages ORDER BY timestamp DESC';
+                foreach ($db->query($sql) as $row) {
+                    echo '<p>';
+                    echo htmlentities($row['username']) . '<br>';
+                    echo htmlentities($row['message']) . '<br>';
+                    echo 'Posted: '.$row['timestamp'] . '<br>';
+                    echo '</p>';
                 }
             ?>
         </div>

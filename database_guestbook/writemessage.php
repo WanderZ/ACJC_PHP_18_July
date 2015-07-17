@@ -1,18 +1,27 @@
 <?php
     session_start();
     
-    # Tasks
-    # =====
+    if (!isset($_SESSION['name'])) {
+        die('This page can only be viewed by logged in users!');
+    }
     
-    # Check if user is logged in
-    # If user is logged in, 
-    # 1) Show the form to post a message
-    # 2) Display a welcome message above the text box with the user's name
-    
-    # If user is not logged in, either
-    # 1) Redirect the user to login.php using the location header
-    #    See http://sg.php.net/manual/en/function.header.php
-    # 2) Display a link for the user to click to log in
+    if(isset($_POST['message'])) {
+        # User attempted to post message. 
+        
+        require_once('dbconfig.php');
+        
+        $username = $_SESSION['name'];
+        $message = $_POST['message'];
+        
+        $stmt = $db->prepare('INSERT INTO messages (username, message, timestamp) VALUES (:username, :message, NOW())');
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':message', $message);
+        
+        if ($stmt->execute()){
+            # insert successful
+            header('Location: viewmessages.php');
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,9 +36,9 @@
     <body>
         <div class="container">
             <div class="row">
-                <form method="get" action="result.php">
+                <form method="post" action="writemessage.php">
                     <div class="form-group">
-                        <p>Welcome <?php # Hint: Display name here ?>!</p>
+                        <p>Welcome <?php echo htmlentities($_SESSION['name']); ?>!</p>
                         <label for="msg">Enter your Message</label>
                         <input class="form-control" type="text" id="msg" name="message">
                     </div>

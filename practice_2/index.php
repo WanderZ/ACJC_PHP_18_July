@@ -9,7 +9,7 @@
     # Are you still able to manipulate the URL to modify the data submitted?
     
     # Q2: Lets create a menu so that you can navigate from the results back to the entering of message
-    # Hint: include_once() to include a whole chunk of navigation html shared for both index.php and result.php.
+    # Hint: include_once() or include() to include a whole chunk of navigation html shared for both index.php and result.php.
 ?>
 <!DOCTYPE html>
 <html>
