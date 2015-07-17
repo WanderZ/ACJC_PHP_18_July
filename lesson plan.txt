@@ -1,0 +1,15 @@
+Basics of PHP: echo, variables
+Ex 0: Hello world example in PHP
+
+HTML forms
+var_dump, arrays
+Ex 1: Form with one field -> get students to add more fields and see results with var_dump
+
+Form actions, methods (GET/POST), Arrays, $_GET/$_POST
+Ex 2: Submit form to another PHP script.
+
+Read/write from file, loops, htmlentities
+Ex 3: Write form submission to text file. Display contents of test file. Make a simple "guestbook"
+
+Intro to sessions
+Ex 4: Use sessions to remember name of user for guestbook

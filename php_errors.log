@@ -1,0 +1,10 @@
+[17-Jul-2015 08:20:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/practice_4/result.php on line 25
+[17-Jul-2015 08:20:33 UTC] PHP Stack trace:
+[17-Jul-2015 08:20:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/practice_4/result.php:0
+[17-Jul-2015 08:21:03 UTC] PHP Warning:  file(messages.txt): failed to open stream: No such file or directory in /home/ubuntu/workspace/practice_4/result.php on line 25
+[17-Jul-2015 08:21:03 UTC] PHP Stack trace:
+[17-Jul-2015 08:21:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/practice_4/result.php:0
+[17-Jul-2015 08:21:03 UTC] PHP   2. file() /home/ubuntu/workspace/practice_4/result.php:25
+[17-Jul-2015 08:21:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/practice_4/result.php on line 26
+[17-Jul-2015 08:21:03 UTC] PHP Stack trace:
+[17-Jul-2015 08:21:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/practice_4/result.php:0
