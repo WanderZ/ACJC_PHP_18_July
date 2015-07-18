@@ -1,4 +1,5 @@
 <?php
+    session_start();
     # Tasks
     # =====
     // if(!isset($_SESSION['name'])) {
@@ -28,7 +29,7 @@
         <div class="container">
             <div class="alert alert-success" role="alert">
                 <?php
-                    echo $_SESSION['name']."says :". $_POST['msg'];
+                    echo $_SESSION['name']." says:". $_POST['msg'];
                 ?>
             </div>
             <?php
@@ -37,6 +38,10 @@
                     echo '<p>'.htmlentities($message).'</p>';
                 }
             ?>
+            <div class="row">
+                <a class="btn btn-primary btn-block" href="index.php">Add another message</a>
+                <a class="btn btn-danger btn-block" href="logout.php">Log me out</a>
+            </div>
         </div>
     </body>
     <!-- Link to external js here -->

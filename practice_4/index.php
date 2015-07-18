@@ -37,34 +37,42 @@
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Guestbook</title>
-        <!-- Link to external css here -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="icon" type="image/png" href="../images/favicon.ico">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <form method="post" action="result.php">
-                    <div style="display: block; padding-top: 5%;">
-                        <div class="form-group">
-                            <p>Welcome <?php echo $_SESSION['name']; ?>!</p>
-                            <label for="msg">Enter your Message</label>
-                            <input class="form-control" type="text" id="msg" name="msg" />
-                        </div>
-                        <input class="btn btn-primary btn-block" type="submit" value="Submit">
-                        <input class="btn btn-default btn-block" type="reset" value="Reset">
-                        <a class="btn btn-danger btn-block" href="logout.php" style="display: block;">Log me out</a>
-                    </div>
-                </form>
+  <head>
+    <title>Guestbook</title>
+    <!-- Link to external css here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <form method="post" action="result.php">
+          <div style="display: block; padding-top: 5%;">
+            <div class="form-group">
+              <h1 style="text-align: center;">Welcome <?php echo $_SESSION['name']; ?>!</h1>
+              <label for="msg">Enter your Message</label>
+              <input class="form-control" type="text" id="msg" name="msg" />
             </div>
-        </div>
-    </body>
-    <!-- Link to external js here -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+            <div>
+              <div class="col-md-4">
+                <a class="btn btn-danger btn-block" href="logout.php" style="display: block;">Log me out</a>
+              </div>
+              <div class="col-md-4">
+                <input class="btn btn-primary btn-block" type="submit" value="Submit My Message">
+              </div>
+              <div class="col-md-4">
+                <input class="btn btn-default btn-block" type="reset" value="Reset">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <!-- Link to external js here -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </html>
 <?php 
     # This is available on https://github.com/WanderZ/ACJC_PHP_18_July.git
