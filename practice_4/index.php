@@ -4,6 +4,10 @@
     # Tasks
     # =====
     
+    if(!isset($_SESSION['name'])) {
+        # Redirect to login because user has not logged in.
+        header('Location: login.php');
+    }
     # Q1: Check if user is logged in
     # If user is logged in, 
     # 1) Show the form to post a message
@@ -44,14 +48,17 @@
     <body>
         <div class="container">
             <div class="row">
-                <form method="get" action="result.php">
-                    <div class="form-group">
-                        <p>Welcome <?php # Hint: Display name here ?>!</p>
-                        <label for="msg">Enter your Message</label>
-                        <input class="form-control" type="text" id="msg" name="message">
+                <form method="post" action="result.php">
+                    <div style="display: block; padding-top: 5%;">
+                        <div class="form-group">
+                            <p>Welcome <?php echo $_SESSION['name']; ?>!</p>
+                            <label for="msg">Enter your Message</label>
+                            <input class="form-control" type="text" id="msg" name="msg" />
+                        </div>
+                        <input class="btn btn-primary btn-block" type="submit" value="Submit">
+                        <input class="btn btn-default btn-block" type="reset" value="Reset">
+                        <a class="btn btn-danger btn-block" href="logout.php" style="display: block;">Log me out</a>
                     </div>
-                    <input class="btn btn-primary btn-block" type="submit" value="Submit">
-                    <input class="btn btn-default btn-block" type="reset" value="Reset">
                 </form>
             </div>
         </div>

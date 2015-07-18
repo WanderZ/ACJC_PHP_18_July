@@ -1,13 +1,17 @@
 <?php
     # Tasks
     # =====
-    
+    // if(!isset($_SESSION['name'])) {
+    //     # Redirect to index because user has already logged in.
+    //     header('Location: login.php');
+    // }
     # Modify the code below to do the following:
     # 1) Check that the user is logged in before allowing the user to write to the text file
     # 2) Write the user's name (from the session) to the text file
     
-    if (isset($_POST['message'])) {
-        file_put_contents('messages.txt', $_POST['themessage']."\n", FILE_APPEND);
+    if (isset($_POST['msg'])) {
+        $msg_to_save = $_SESSION['name'] . ' says: ' . $_POST['msg'];
+        file_put_contents('messages.txt', $msg_to_save."\n", FILE_APPEND);
     }
 ?>
 <!DOCTYPE html>
@@ -24,7 +28,7 @@
         <div class="container">
             <div class="alert alert-success" role="alert">
                 <?php
-                    echo $_SESSION['name']."says :". $_GET['message'];
+                    echo $_SESSION['name']."says :". $_POST['msg'];
                 ?>
             </div>
             <?php
